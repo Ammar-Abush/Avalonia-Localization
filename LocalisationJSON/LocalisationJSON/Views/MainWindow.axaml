@@ -1,0 +1,19 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:LocalisationJSON.ViewModels"
+        x:Class="LocalisationJSON.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Title="Localization">
+
+    <StackPanel>
+        <ComboBox SelectedItem="{Binding Localization.CurrentLanguage, Mode=TwoWay}">
+            <ComboBox.Items>
+                <x:String>en</x:String>
+                <x:String>ar-SA</x:String>
+            </ComboBox.Items>
+        </ComboBox>
+
+        <TextBlock Text="{Binding Greeting}"/>
+    </StackPanel>
+
+</Window>
